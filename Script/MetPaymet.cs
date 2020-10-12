@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,18 +32,19 @@ public class MetPaymet : MonoBehaviour
 
     public void OnMouseDown()
     {
+       
         if ((Length.text != "") & (Width.text != ""))
         {
                 double length_ = Convert.ToDouble(Length.text);// Длина
                 double width_ = Convert.ToDouble(Width.text);// Ширина
-              if ( width_ < 0) 
+              if (length_ < 0) 
               {
-                length_ = length_ * (-1);
+                length_ *= -1;
               }
 
               if (width_<0)
               {
-                width_ = width_ * (-1);
+                width_ *= -1;
               }
 
           if ((width_ <= 2250)& (width_ > 1170))
@@ -69,7 +68,7 @@ public class MetPaymet : MonoBehaviour
                 double qt_s = Math.Ceiling(length_ / 1060);
                 if (Tog.GetComponent<Toggle>().isOn == false)
                 {
-                    qt_s = qt_s * 2;
+                qt_s *= 2;
                 }
             if (calculOver == false)
             {
@@ -97,10 +96,10 @@ public class MetPaymet : MonoBehaviour
                     w1 = Math.Ceiling(balance2);
                 }
             }
-                w1 = w1 * qt_s;
-                w3 = w3 * qt_s;
-                w6 = w6 * qt_s;
-                print("6 волн " + w6);
+                w1 *= qt_s;
+                w3 *= qt_s;
+                w6 *= qt_s;
+            print("6 волн " + w6);
                 print("3 волны " + w3);
                 print("1 волна " + w1);
             

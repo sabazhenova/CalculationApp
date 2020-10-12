@@ -11,10 +11,4 @@ public class CloseScene : MonoBehaviour
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
